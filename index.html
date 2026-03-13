@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>North Houston Gutters × AGE — Complete Business Launch</title>
+    <title>Magnolia Gutters × AGE — Complete Business Launch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1E3A5F;
-            --primary-light: #2E5A8F;
-            --accent: #FF6B35;
             --green: #2D5A3D;
-            --dark: #1a1a2e;
-            --darker: #0f0f1a;
+            --green-light: #3D7A4D;
+            --navy: #1E3A5F;
+            --navy-light: #2E5A8F;
+            --accent: #C87533;
+            --dark: #0f1a12;
+            --darker: #0a110c;
             --light: #f8f9fa;
             --gray: #6c757d;
-            --border: #2a2a3e;
-            --warning: #f59e0b;
-            --success: #10b981;
+            --border: #1a2a1e;
+            --success: #4ade80;
         }
 
         * {
@@ -45,7 +45,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(15, 15, 26, 0.95);
+            background: rgba(10, 17, 12, 0.95);
             backdrop-filter: blur(10px);
             padding: 1rem 2rem;
             z-index: 1000;
@@ -81,36 +81,24 @@
 
         .section-number {
             font-size: 0.8rem;
-            color: var(--accent);
+            color: var(--green-light);
             font-weight: 600;
             letter-spacing: 2px;
             margin-bottom: 0.5rem;
         }
 
-        h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
+        h1, h2, h3 {
             font-weight: 700;
-            margin-bottom: 2rem;
             line-height: 1.2;
         }
 
-        h2 {
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--light);
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--light);
-        }
+        h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 2rem; }
+        h2 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 1.5rem; }
+        h3 { font-size: 1.3rem; margin-bottom: 1rem; }
 
         p {
             margin-bottom: 1.5rem;
-            color: #b8b8c8;
+            color: #b8c8bc;
         }
 
         .lead {
@@ -118,44 +106,52 @@
             color: var(--light);
         }
 
+        /* Hero with background */
         #hero {
+            position: relative;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            min-height: 70vh;
-            padding-top: 8rem;
+            padding-top: 6rem;
+            background: linear-gradient(180deg, rgba(10, 17, 12, 0.7) 0%, rgba(10, 17, 12, 0.95) 100%), url('assets/2026-03-13-magnolia-website-hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-logo {
+            max-width: 350px;
+            margin-bottom: 2rem;
         }
 
         #hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            background: linear-gradient(135deg, var(--light) 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        #hero .subtitle {
-            font-size: 1.2rem;
-            color: var(--gray);
-            margin-top: 1rem;
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: var(--light);
         }
 
         #hero .tagline {
             font-size: 1.5rem;
-            color: var(--accent);
+            color: var(--green-light);
             margin-top: 0.5rem;
             font-weight: 600;
+        }
+
+        #hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
         }
 
         .audio-intro {
             margin-top: 2.5rem;
             padding: 1.5rem 2rem;
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid var(--accent);
+            background: rgba(45, 90, 61, 0.2);
+            border: 1px solid var(--green);
             border-radius: 12px;
             text-align: center;
+            backdrop-filter: blur(10px);
         }
 
         .audio-label {
@@ -171,8 +167,8 @@
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, rgba(30, 58, 95, 0.3) 0%, rgba(255, 107, 53, 0.2) 100%);
-            border: 2px solid var(--accent);
+            background: linear-gradient(135deg, rgba(45, 90, 61, 0.3) 0%, rgba(30, 58, 95, 0.2) 100%);
+            border: 2px solid var(--green);
             border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
@@ -182,12 +178,48 @@
         .highlight-box .big-number {
             font-size: 3rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--green-light);
         }
 
         .highlight-box p {
             margin-bottom: 0;
             color: var(--light);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: rgba(30, 58, 95, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .gallery-section h3 {
+            color: var(--navy-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
 
         .market-stats {
@@ -198,7 +230,7 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(45, 90, 61, 0.1);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 1.5rem;
@@ -208,7 +240,7 @@
         .stat-card .number {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--green-light);
         }
 
         .stat-card .label {
@@ -224,7 +256,7 @@
         }
 
         .phase-card {
-            background: linear-gradient(135deg, rgba(30, 58, 95, 0.1) 0%, rgba(45, 90, 61, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(45, 90, 61, 0.1) 0%, rgba(30, 58, 95, 0.1) 100%);
             border: 1px solid var(--border);
             border-radius: 16px;
             padding: 2rem;
@@ -232,12 +264,12 @@
         }
 
         .phase-card:hover {
-            border-color: var(--accent);
+            border-color: var(--green);
         }
 
         .phase-number {
             font-size: 0.8rem;
-            color: var(--accent);
+            color: var(--green-light);
             font-weight: 600;
             letter-spacing: 2px;
             margin-bottom: 0.5rem;
@@ -250,7 +282,7 @@
 
         .phase-card .timeline {
             font-size: 0.85rem;
-            color: var(--green);
+            color: var(--navy-light);
             margin-bottom: 1rem;
             font-weight: 500;
         }
@@ -261,7 +293,7 @@
 
         .phase-card li {
             padding: 0.4rem 0;
-            color: #b8b8c8;
+            color: #b8c8bc;
             display: flex;
             align-items: flex-start;
             gap: 0.5rem;
@@ -290,13 +322,13 @@
 
         .agent-card:hover {
             transform: translateY(-4px);
-            border-color: var(--accent);
+            border-color: var(--green);
         }
 
         .agent-card h4 {
             font-size: 1.1rem;
             margin-bottom: 0.3rem;
-            color: var(--accent);
+            color: var(--green-light);
         }
 
         .agent-card .role {
@@ -323,7 +355,7 @@
         }
 
         .pricing-section h4 {
-            color: var(--accent);
+            color: var(--green-light);
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
@@ -340,7 +372,7 @@
         }
 
         .pricing-row .label {
-            color: #b8b8c8;
+            color: #b8c8bc;
         }
 
         .pricing-row .value {
@@ -349,7 +381,7 @@
         }
 
         .pricing-row .value.accent {
-            color: var(--accent);
+            color: var(--green-light);
         }
 
         .pricing-row .value.green {
@@ -357,8 +389,8 @@
         }
 
         .revenue-share-box {
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(45, 90, 61, 0.15) 100%);
-            border: 2px solid var(--accent);
+            background: linear-gradient(135deg, rgba(45, 90, 61, 0.2) 0%, rgba(30, 58, 95, 0.15) 100%);
+            border: 2px solid var(--green);
             border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
@@ -368,7 +400,7 @@
         .revenue-share-box .big {
             font-size: 4rem;
             font-weight: 700;
-            color: var(--accent);
+            color: var(--green-light);
         }
 
         .revenue-share-box .sub {
@@ -376,16 +408,46 @@
             color: var(--light);
         }
 
+        .dashboard-highlight {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.2) 0%, rgba(45, 90, 61, 0.1) 100%);
+            border: 1px solid var(--navy);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .dashboard-highlight h4 {
+            color: var(--navy-light);
+            margin-bottom: 1rem;
+        }
+
+        .dashboard-highlight ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .dashboard-highlight li {
+            padding: 0.4rem 0;
+            color: #b8c8bc;
+        }
+
+        .dashboard-highlight li::before {
+            content: '→ ';
+            color: var(--navy-light);
+        }
+
         .equity-box {
-            background: rgba(45, 90, 61, 0.1);
-            border: 1px solid var(--green);
+            background: rgba(30, 58, 95, 0.15);
+            border: 1px solid var(--navy);
             border-radius: 12px;
             padding: 2rem;
             margin: 2rem 0;
         }
 
         .equity-box h4 {
-            color: var(--green);
+            color: var(--navy-light);
             margin-bottom: 1rem;
         }
 
@@ -413,7 +475,7 @@
         }
 
         .projections-table .highlight td {
-            background: rgba(255, 107, 53, 0.1);
+            background: rgba(45, 90, 61, 0.15);
             font-weight: 600;
         }
 
@@ -438,7 +500,7 @@
         }
 
         .milestone-card h4 {
-            color: var(--accent);
+            color: var(--green-light);
             margin-bottom: 1rem;
         }
 
@@ -448,7 +510,7 @@
 
         .milestone-card li {
             padding: 0.3rem 0;
-            color: #b8b8c8;
+            color: #b8c8bc;
             font-size: 0.9rem;
         }
 
@@ -472,11 +534,11 @@
         }
 
         .role-card h4.operators {
-            color: var(--accent);
+            color: var(--green-light);
         }
 
         .role-card h4.age {
-            color: var(--green);
+            color: var(--navy-light);
         }
 
         .role-card ul {
@@ -485,7 +547,7 @@
 
         .role-card li {
             padding: 0.4rem 0;
-            color: #b8b8c8;
+            color: #b8c8bc;
             display: flex;
             align-items: flex-start;
             gap: 0.5rem;
@@ -531,9 +593,9 @@
             text-align: center;
             margin-top: 3rem;
             padding: 3rem;
-            background: linear-gradient(135deg, rgba(30, 58, 95, 0.2) 0%, rgba(255, 107, 53, 0.15) 100%);
+            background: linear-gradient(135deg, rgba(45, 90, 61, 0.2) 0%, rgba(30, 58, 95, 0.15) 100%);
             border-radius: 16px;
-            border: 1px solid var(--accent);
+            border: 1px solid var(--green);
         }
 
         .cta-section h3 {
@@ -543,7 +605,7 @@
 
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            background: linear-gradient(135deg, var(--green) 0%, var(--navy) 100%);
             color: white;
             padding: 1rem 2.5rem;
             border-radius: 8px;
@@ -556,7 +618,7 @@
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 10px 30px rgba(45, 90, 61, 0.3);
         }
 
         footer {
@@ -568,26 +630,12 @@
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                gap: 1rem;
-            }
-
-            section {
-                padding: 4rem 1.5rem 3rem;
-            }
-
-            .pricing-row {
-                flex-direction: column;
-                gap: 0.3rem;
-            }
-
-            .projections-table {
-                font-size: 0.85rem;
-            }
-
-            .projections-table th, .projections-table td {
-                padding: 0.6rem;
-            }
+            nav ul { gap: 1rem; }
+            section { padding: 4rem 1.5rem 3rem; }
+            .hero-logo { max-width: 280px; }
+            .pricing-row { flex-direction: column; gap: 0.3rem; }
+            .projections-table { font-size: 0.85rem; }
+            .projections-table th, .projections-table td { padding: 0.6rem; }
         }
     </style>
 </head>
@@ -605,7 +653,7 @@
     </nav>
 
     <section id="hero">
-        <p class="section-number">NORTH HOUSTON GUTTERS × AGE</p>
+        <img src="assets/2026-03-13-magnolia-gutters-logo.png" alt="Magnolia Gutters" class="hero-logo">
         <h1>Complete Business Launch</h1>
         <p class="tagline">From Zero to $100K+ in 6 Months</p>
         <p class="subtitle">For Jacob Powell & Dawson Williford</p>
@@ -647,11 +695,27 @@
         <h3>Target Markets</h3>
         <p>The Woodlands, Spring, Conroe, Humble, Cypress — North Houston's fastest-growing suburbs. High home values ($250K-$600K), active construction, and storm exposure create constant demand.</p>
 
+        <div class="gallery-section">
+            <h3>📸 Sample Work (AI-Generated Previews)</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/2026-03-13-magnolia-before-after-01.png" alt="Before/After 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/2026-03-13-magnolia-before-after-02.png" alt="Before/After 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/2026-03-13-magnolia-before-after-03.png" alt="Before/After 3">
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">Real portfolio will be built from your actual installations</p>
+        </div>
+
         <h3>The Competition Gap</h3>
         <p>Current players are either old-school (no online presence, slow response) or corporate franchises (impersonal, long wait times). Nobody is doing <strong>AI-powered instant quotes</strong> and <strong>24/7 lead response</strong>. That's your differentiation.</p>
 
         <div class="highlight-box">
-            <p class="big-number">The Tech-Forward Gutter Company</p>
+            <p class="big-number">North Houston's Smartest Gutter Company</p>
             <p>Instant quotes. Expert install. Zero hassle.</p>
         </div>
     </section>
@@ -705,13 +769,26 @@
                 <h4>Operations System</h4>
                 <p class="timeline">Week 4-6</p>
                 <ul>
-                    <li>CRM (Go High Level)</li>
+                    <li>Custom AGE Dashboard</li>
                     <li>Job scheduling + crew assignment</li>
                     <li>Automated invoicing</li>
                     <li>Review request automation</li>
                     <li>Referral program</li>
                 </ul>
             </div>
+        </div>
+
+        <div class="dashboard-highlight">
+            <h4>🖥️ Custom AGE Dashboard (No Third-Party CRM)</h4>
+            <p>Everything runs through our custom-built dashboard — no GHL, no extra subscriptions.</p>
+            <ul>
+                <li>Real-time lead pipeline</li>
+                <li>Job scheduling calendar</li>
+                <li>Revenue tracking</li>
+                <li>Agent activity logs</li>
+                <li>Simple CRM (contacts, history)</li>
+                <li>All data flows through AI agents</li>
+            </ul>
         </div>
 
         <h3>Your AI Agent Fleet</h3>
@@ -801,12 +878,8 @@
             <div class="pricing-section">
                 <h4>📅 Monthly Recurring</h4>
                 <div class="pricing-row">
-                    <span class="label">AGE Platform (10+ agents)</span>
+                    <span class="label">AGE Platform (10+ agents + custom dashboard)</span>
                     <span class="value">$500/mo</span>
-                </div>
-                <div class="pricing-row">
-                    <span class="label">Go High Level CRM</span>
-                    <span class="value">$297/mo</span>
                 </div>
                 <div class="pricing-row">
                     <span class="label">Ad Spend (Meta + Google)</span>
@@ -814,7 +887,7 @@
                 </div>
                 <div class="pricing-row">
                     <span class="label">Total Monthly</span>
-                    <span class="value accent">$2,797/mo</span>
+                    <span class="value accent">$2,500/mo</span>
                 </div>
             </div>
         </div>
@@ -876,8 +949,8 @@
                 <td>$4,800</td>
                 <td>$1,000</td>
                 <td>$576</td>
-                <td>$2,797</td>
-                <td style="color: #ef4444;">-$573 (ramp)</td>
+                <td>$2,500</td>
+                <td style="color: #ef4444;">-$276 (ramp)</td>
             </tr>
             <tr>
                 <td>2</td>
@@ -885,8 +958,8 @@
                 <td>$9,600</td>
                 <td>$2,000</td>
                 <td>$1,152</td>
-                <td>$2,797</td>
-                <td style="color: var(--success);">$3,651</td>
+                <td>$2,500</td>
+                <td style="color: var(--success);">$3,948</td>
             </tr>
             <tr>
                 <td>3</td>
@@ -894,8 +967,8 @@
                 <td>$14,400</td>
                 <td>$3,000</td>
                 <td>$1,728</td>
-                <td>$2,797</td>
-                <td style="color: var(--success);">$6,875</td>
+                <td>$2,500</td>
+                <td style="color: var(--success);">$7,172</td>
             </tr>
             <tr>
                 <td>4</td>
@@ -903,8 +976,8 @@
                 <td>$19,200</td>
                 <td>$4,000</td>
                 <td>$2,304</td>
-                <td>$2,797</td>
-                <td style="color: var(--success);">$10,099</td>
+                <td>$2,500</td>
+                <td style="color: var(--success);">$10,396</td>
             </tr>
             <tr>
                 <td>5</td>
@@ -912,8 +985,8 @@
                 <td>$24,000</td>
                 <td>$5,000</td>
                 <td>$2,880</td>
-                <td>$2,797</td>
-                <td style="color: var(--success);">$13,323</td>
+                <td>$2,500</td>
+                <td style="color: var(--success);">$13,620</td>
             </tr>
             <tr class="highlight">
                 <td>6</td>
@@ -921,22 +994,22 @@
                 <td>$28,800</td>
                 <td>$6,000</td>
                 <td>$3,456</td>
-                <td>$2,797</td>
-                <td style="color: var(--success);">$16,547</td>
+                <td>$2,500</td>
+                <td style="color: var(--success);">$16,844</td>
             </tr>
             <tr class="total">
                 <td colspan="2">6-Month Total</td>
                 <td>$100,800</td>
                 <td>$21,000</td>
                 <td>$12,096</td>
-                <td>$16,782</td>
-                <td>$50,922</td>
+                <td>$15,000</td>
+                <td>$52,704</td>
             </tr>
         </table>
 
         <div class="highlight-box">
-            <p class="big-number">$25,461</p>
-            <p>Per operator (split 2 ways) in first 6 months = <strong>$4,244/mo each</strong></p>
+            <p class="big-number">$26,352</p>
+            <p>Per operator (split 2 ways) in first 6 months = <strong>$4,392/mo each</strong></p>
         </div>
 
         <h3>Year 2-3 (At Scale)</h3>
@@ -980,7 +1053,7 @@
                     <li>✓ Website live</li>
                     <li>✓ Google Business Profile active</li>
                     <li>✓ First ads running</li>
-                    <li>✓ CRM configured</li>
+                    <li>✓ Dashboard configured</li>
                 </ul>
             </div>
             <div class="milestone-card">
@@ -1067,7 +1140,7 @@
                 <div class="term-check">✓</div>
                 <div>
                     <h4>Weekly Revenue Reporting</h4>
-                    <p>You self-report weekly via CRM. AGE audits monthly. Payment due every Friday for prior week's completed jobs.</p>
+                    <p>You self-report weekly via the dashboard. AGE audits monthly. Payment due every Friday for prior week's completed jobs.</p>
                 </div>
             </div>
 
@@ -1106,14 +1179,14 @@
 
         <div class="cta-section">
             <h3>Ready to build North Houston's smartest gutter company?</h3>
-            <p>$5K to launch. $2,797/mo to operate. 12% of what you earn.</p>
+            <p>$5K to launch. $2,500/mo to operate. 12% of what you earn.</p>
             <p style="margin-bottom: 0;"><strong>Projected: $130K+ each by Year 2.</strong></p>
-            <a href="mailto:brad@agegrowth.ai?subject=North%20Houston%20Gutters%20-%20Let's%20Build" class="cta-button">Let's Talk</a>
+            <a href="mailto:brad@agegrowth.ai?subject=Magnolia%20Gutters%20-%20Let's%20Build" class="cta-button">Let's Talk</a>
         </div>
     </section>
 
     <footer>
-        <p>North Houston Gutters × AGE — Complete Business Launch Proposal</p>
+        <p>Magnolia Gutters × AGE — Complete Business Launch Proposal</p>
         <p>Prepared March 13, 2026</p>
     </footer>
 </body>
