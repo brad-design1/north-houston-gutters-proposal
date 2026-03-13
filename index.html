@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Houston Gutters × AGE — Complete Business Launch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1E3A5F;
+            --primary-light: #2E5A8F;
+            --accent: #FF6B35;
+            --green: #2D5A3D;
+            --dark: #1a1a2e;
+            --darker: #0f0f1a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --border: #2a2a3e;
+            --warning: #f59e0b;
+            --success: #10b981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--light);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-number {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--light);
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--light);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #b8b8c8;
+        }
+
+        .lead {
+            font-size: 1.2rem;
+            color: var(--light);
+        }
+
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 70vh;
+            padding-top: 8rem;
+        }
+
+        #hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            background: linear-gradient(135deg, var(--light) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        #hero .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-top: 1rem;
+        }
+
+        #hero .tagline {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-top: 0.5rem;
+            font-weight: 600;
+        }
+
+        .audio-intro {
+            margin-top: 2.5rem;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .audio-label {
+            font-size: 0.95rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+        }
+
+        .audio-intro audio {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.3) 0%, rgba(255, 107, 53, 0.2) 100%);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box .big-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--light);
+        }
+
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-card .label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 0.5rem;
+        }
+
+        .phase-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .phase-card {
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.1) 0%, rgba(45, 90, 61, 0.1) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: border-color 0.3s;
+        }
+
+        .phase-card:hover {
+            border-color: var(--accent);
+        }
+
+        .phase-number {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .phase-card .timeline {
+            font-size: 0.85rem;
+            color: var(--green);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .phase-card ul {
+            list-style: none;
+        }
+
+        .phase-card li {
+            padding: 0.4rem 0;
+            color: #b8b8c8;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .phase-card li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .agent-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .agent-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--accent);
+        }
+
+        .agent-card .role {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .agent-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .pricing-breakdown {
+            margin: 3rem 0;
+        }
+
+        .pricing-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-section h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-row .label {
+            color: #b8b8c8;
+        }
+
+        .pricing-row .value {
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .pricing-row .value.accent {
+            color: var(--accent);
+        }
+
+        .pricing-row .value.green {
+            color: var(--success);
+        }
+
+        .revenue-share-box {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(45, 90, 61, 0.15) 100%);
+            border: 2px solid var(--accent);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .revenue-share-box .big {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .revenue-share-box .sub {
+            font-size: 1.5rem;
+            color: var(--light);
+        }
+
+        .equity-box {
+            background: rgba(45, 90, 61, 0.1);
+            border: 1px solid var(--green);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .equity-box h4 {
+            color: var(--green);
+            margin-bottom: 1rem;
+        }
+
+        .projections-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .projections-table th, .projections-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .projections-table th {
+            color: var(--gray);
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+        .projections-table td {
+            color: var(--light);
+        }
+
+        .projections-table .highlight td {
+            background: rgba(255, 107, 53, 0.1);
+            font-weight: 600;
+        }
+
+        .projections-table .total td {
+            font-weight: 700;
+            color: var(--success);
+            border-top: 2px solid var(--success);
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .milestone-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .milestone-card h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .milestone-card ul {
+            list-style: none;
+        }
+
+        .milestone-card li {
+            padding: 0.3rem 0;
+            color: #b8b8c8;
+            font-size: 0.9rem;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .role-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .role-card h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .role-card h4.operators {
+            color: var(--accent);
+        }
+
+        .role-card h4.age {
+            color: var(--green);
+        }
+
+        .role-card ul {
+            list-style: none;
+        }
+
+        .role-card li {
+            padding: 0.4rem 0;
+            color: #b8b8c8;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .role-card li::before {
+            content: '→';
+            color: var(--gray);
+        }
+
+        .terms-list {
+            margin: 2rem 0;
+        }
+
+        .term-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .term-check {
+            font-size: 1.5rem;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        .term-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .term-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.2) 0%, rgba(255, 107, 53, 0.15) 100%);
+            border-radius: 16px;
+            border: 1px solid var(--accent);
+        }
+
+        .cta-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem 3rem;
+            }
+
+            .pricing-row {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .projections-table {
+                font-size: 0.85rem;
+            }
+
+            .projections-table th, .projections-table td {
+                padding: 0.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#market">The Market</a></li>
+            <li><a href="#build">What We Build</a></li>
+            <li><a href="#investment">Investment</a></li>
+            <li><a href="#projections">Projections</a></li>
+            <li><a href="#roles">Roles</a></li>
+            <li><a href="#terms">Terms</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <p class="section-number">NORTH HOUSTON GUTTERS × AGE</p>
+        <h1>Complete Business Launch</h1>
+        <p class="tagline">From Zero to $100K+ in 6 Months</p>
+        <p class="subtitle">For Jacob Powell & Dawson Williford</p>
+        
+        <div class="audio-intro">
+            <p class="audio-label">🎧 Listen to Brad's intro (90 sec)</p>
+            <audio controls>
+                <source src="intro-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </section>
+
+    <section id="market">
+        <p class="section-number">01 — THE OPPORTUNITY</p>
+        <h2>North Houston is booming. Gutters are recession-proof.</h2>
+        
+        <p class="lead">Every new home needs gutters. Every storm damages gutters. Every home sale includes gutter inspection. This is a market with constant, predictable demand — and no single company owns more than 5% of it.</p>
+
+        <div class="market-stats">
+            <div class="stat-card">
+                <div class="number">$778M</div>
+                <div class="label">U.S. Gutter Market (Annual)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">5.24%</div>
+                <div class="label">Annual Growth Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">79%</div>
+                <div class="label">Gross Margin Per Job</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">$2,400</div>
+                <div class="label">Average Job Value</div>
+            </div>
+        </div>
+
+        <h3>Target Markets</h3>
+        <p>The Woodlands, Spring, Conroe, Humble, Cypress — North Houston's fastest-growing suburbs. High home values ($250K-$600K), active construction, and storm exposure create constant demand.</p>
+
+        <h3>The Competition Gap</h3>
+        <p>Current players are either old-school (no online presence, slow response) or corporate franchises (impersonal, long wait times). Nobody is doing <strong>AI-powered instant quotes</strong> and <strong>24/7 lead response</strong>. That's your differentiation.</p>
+
+        <div class="highlight-box">
+            <p class="big-number">The Tech-Forward Gutter Company</p>
+            <p>Instant quotes. Expert install. Zero hassle.</p>
+        </div>
+    </section>
+
+    <section id="build">
+        <p class="section-number">02 — WHAT WE BUILD</p>
+        <h2>A complete business in 6 weeks.</h2>
+
+        <div class="phase-grid">
+            <div class="phase-card">
+                <p class="phase-number">PHASE 1</p>
+                <h4>Foundation</h4>
+                <p class="timeline">Week 1-2</p>
+                <ul>
+                    <li>Brand identity (logo, colors, guidelines)</li>
+                    <li>Domain + Google Workspace</li>
+                    <li>Business phone with routing</li>
+                    <li>Google Business Profile</li>
+                    <li>Yelp, Angi, Houzz, Nextdoor setup</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <p class="phase-number">PHASE 2</p>
+                <h4>Digital Presence</h4>
+                <p class="timeline">Week 2-4</p>
+                <ul>
+                    <li>5-page responsive website</li>
+                    <li>SEO foundation + local keywords</li>
+                    <li>Before/after gallery system</li>
+                    <li>4 SEO blog posts</li>
+                    <li>AI chatbot for instant quotes</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <p class="phase-number">PHASE 3</p>
+                <h4>Lead Generation</h4>
+                <p class="timeline">Week 3-6</p>
+                <ul>
+                    <li>Meta Ads ($1K/mo)</li>
+                    <li>Google Local Service Ads ($500/mo)</li>
+                    <li>Google Search Ads ($500/mo)</li>
+                    <li>Instant online quoting tool</li>
+                    <li>Automated follow-up sequences</li>
+                </ul>
+            </div>
+
+            <div class="phase-card">
+                <p class="phase-number">PHASE 4</p>
+                <h4>Operations System</h4>
+                <p class="timeline">Week 4-6</p>
+                <ul>
+                    <li>CRM (Go High Level)</li>
+                    <li>Job scheduling + crew assignment</li>
+                    <li>Automated invoicing</li>
+                    <li>Review request automation</li>
+                    <li>Referral program</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3>Your AI Agent Fleet</h3>
+        <p>10+ agents running 24/7, handling everything from lead capture to review requests.</p>
+
+        <div class="agent-grid">
+            <div class="agent-card">
+                <h4>LeadCapture</h4>
+                <p class="role">Multi-Source Aggregation</p>
+                <p>Pulls leads from Meta, Google, website, and Angi into one pipeline.</p>
+            </div>
+            <div class="agent-card">
+                <h4>PipelineNinja</h4>
+                <p class="role">Lead Scoring</p>
+                <p>Auto-tags leads: 🔥 Hot, 💰 Warm, ❄️ Cold. Prioritizes your time.</p>
+            </div>
+            <div class="agent-card">
+                <h4>FollowUpBot</h4>
+                <p class="role">SMS/Email Sequences</p>
+                <p>Automated nurture tracks. No lead sits untouched for more than 5 minutes.</p>
+            </div>
+            <div class="agent-card">
+                <h4>QuoteEngine</h4>
+                <p class="role">Instant Quoting</p>
+                <p>Online tool that gives customers a ballpark price in 60 seconds.</p>
+            </div>
+            <div class="agent-card">
+                <h4>AppointmentCloser</h4>
+                <p class="role">Scheduling</p>
+                <p>Calendar booking with automated reminders. Reduces no-shows.</p>
+            </div>
+            <div class="agent-card">
+                <h4>ProjectTracker</h4>
+                <p class="role">Job Management</p>
+                <p>Scheduling, crew assignment, progress tracking.</p>
+            </div>
+            <div class="agent-card">
+                <h4>InvoiceBot</h4>
+                <p class="role">Billing</p>
+                <p>Automated invoicing and payment reminders.</p>
+            </div>
+            <div class="agent-card">
+                <h4>ReviewRanger</h4>
+                <p class="role">Reputation</p>
+                <p>Auto-requests reviews after positive jobs. Monitors online reputation.</p>
+            </div>
+            <div class="agent-card">
+                <h4>WinBack</h4>
+                <p class="role">Reactivation</p>
+                <p>6-month follow-ups for cleaning and upgrades. Repeat business engine.</p>
+            </div>
+            <div class="agent-card">
+                <h4>CreativeForge</h4>
+                <p class="role">Ad Creative</p>
+                <p>Generates fresh ad variants monthly. You approve before launch.</p>
+            </div>
+            <div class="agent-card">
+                <h4>MetaBuyer</h4>
+                <p class="role">Campaign Optimization</p>
+                <p>Monitors performance, suggests budget shifts. Human approval required.</p>
+            </div>
+            <div class="agent-card">
+                <h4>ReferralEngine</h4>
+                <p class="role">Growth</p>
+                <p>Customer referral program. Track rewards and payouts.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="investment">
+        <p class="section-number">03 — INVESTMENT & COMPENSATION</p>
+        <h2>You invest in the launch. We invest in your success.</h2>
+
+        <div class="pricing-breakdown">
+            <div class="pricing-section">
+                <h4>💰 Upfront Investment</h4>
+                <div class="pricing-row">
+                    <span class="label">Complete Business Launch (Phases 1-4)</span>
+                    <span class="value accent">$5,000</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="label">Due upon contract signature</span>
+                    <span class="value"></span>
+                </div>
+            </div>
+
+            <div class="pricing-section">
+                <h4>📅 Monthly Recurring</h4>
+                <div class="pricing-row">
+                    <span class="label">AGE Platform (10+ agents)</span>
+                    <span class="value">$500/mo</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="label">Go High Level CRM</span>
+                    <span class="value">$297/mo</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="label">Ad Spend (Meta + Google)</span>
+                    <span class="value">$2,000/mo</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="label">Total Monthly</span>
+                    <span class="value accent">$2,797/mo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="revenue-share-box">
+            <p class="big">12%</p>
+            <p class="sub">Revenue Share on Every Job</p>
+            <p style="margin-top: 1rem; margin-bottom: 0;">Simple. Flat. No tiers, no thresholds. 12% of every dollar you collect.</p>
+        </div>
+
+        <h3>Example Job</h3>
+        <div class="pricing-section">
+            <div class="pricing-row">
+                <span class="label">Customer pays</span>
+                <span class="value">$2,400</span>
+            </div>
+            <div class="pricing-row">
+                <span class="label">Materials (wholesale)</span>
+                <span class="value">-$500</span>
+            </div>
+            <div class="pricing-row">
+                <span class="label">Gross margin</span>
+                <span class="value">$1,900</span>
+            </div>
+            <div class="pricing-row">
+                <span class="label">AGE revenue share (12%)</span>
+                <span class="value">-$288</span>
+            </div>
+            <div class="pricing-row">
+                <span class="label">Net to operators</span>
+                <span class="value green">$1,612</span>
+            </div>
+        </div>
+
+        <div class="equity-box">
+            <h4>🏦 5% Equity (Exit Only)</h4>
+            <p>AGE holds 5% ownership, payable only upon sale of the company — and only if the acquiring company adopts the AGE tech stack.</p>
+            <p style="margin-bottom: 0;"><strong>No tech transfer = no equity payout.</strong> This aligns our incentives: we only win if you build something worth buying.</p>
+        </div>
+    </section>
+
+    <section id="projections">
+        <p class="section-number">04 — FINANCIAL PROJECTIONS</p>
+        <h2>Conservative path to $100K+ in 6 months.</h2>
+
+        <table class="projections-table">
+            <tr>
+                <th>Month</th>
+                <th>Jobs</th>
+                <th>Revenue</th>
+                <th>Materials</th>
+                <th>AGE 12%</th>
+                <th>Monthly Costs</th>
+                <th>Net to Operators</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>$4,800</td>
+                <td>$1,000</td>
+                <td>$576</td>
+                <td>$2,797</td>
+                <td style="color: #ef4444;">-$573 (ramp)</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>4</td>
+                <td>$9,600</td>
+                <td>$2,000</td>
+                <td>$1,152</td>
+                <td>$2,797</td>
+                <td style="color: var(--success);">$3,651</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>6</td>
+                <td>$14,400</td>
+                <td>$3,000</td>
+                <td>$1,728</td>
+                <td>$2,797</td>
+                <td style="color: var(--success);">$6,875</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>8</td>
+                <td>$19,200</td>
+                <td>$4,000</td>
+                <td>$2,304</td>
+                <td>$2,797</td>
+                <td style="color: var(--success);">$10,099</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>10</td>
+                <td>$24,000</td>
+                <td>$5,000</td>
+                <td>$2,880</td>
+                <td>$2,797</td>
+                <td style="color: var(--success);">$13,323</td>
+            </tr>
+            <tr class="highlight">
+                <td>6</td>
+                <td>12</td>
+                <td>$28,800</td>
+                <td>$6,000</td>
+                <td>$3,456</td>
+                <td>$2,797</td>
+                <td style="color: var(--success);">$16,547</td>
+            </tr>
+            <tr class="total">
+                <td colspan="2">6-Month Total</td>
+                <td>$100,800</td>
+                <td>$21,000</td>
+                <td>$12,096</td>
+                <td>$16,782</td>
+                <td>$50,922</td>
+            </tr>
+        </table>
+
+        <div class="highlight-box">
+            <p class="big-number">$25,461</p>
+            <p>Per operator (split 2 ways) in first 6 months = <strong>$4,244/mo each</strong></p>
+        </div>
+
+        <h3>Year 2-3 (At Scale)</h3>
+        <table class="projections-table">
+            <tr>
+                <th>Year</th>
+                <th>Jobs</th>
+                <th>Revenue</th>
+                <th>AGE 12%</th>
+                <th>Net to Operators</th>
+                <th>Per Operator</th>
+            </tr>
+            <tr>
+                <td>Year 2</td>
+                <td>150</td>
+                <td>$360,000</td>
+                <td>$43,200</td>
+                <td>$261,800</td>
+                <td style="color: var(--success);">$130,900 each</td>
+            </tr>
+            <tr>
+                <td>Year 3</td>
+                <td>250</td>
+                <td>$600,000</td>
+                <td>$72,000</td>
+                <td>$457,000</td>
+                <td style="color: var(--success);">$228,500 each</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="milestones">
+        <p class="section-number">05 — SUCCESS MILESTONES</p>
+        <h2>Clear targets. Measurable progress.</h2>
+
+        <div class="milestone-grid">
+            <div class="milestone-card">
+                <h4>Month 1</h4>
+                <ul>
+                    <li>✓ Brand identity complete</li>
+                    <li>✓ Website live</li>
+                    <li>✓ Google Business Profile active</li>
+                    <li>✓ First ads running</li>
+                    <li>✓ CRM configured</li>
+                </ul>
+            </div>
+            <div class="milestone-card">
+                <h4>Month 3</h4>
+                <ul>
+                    <li>✓ 50+ leads generated</li>
+                    <li>✓ 8+ jobs booked</li>
+                    <li>✓ $15,000+ revenue</li>
+                    <li>✓ 5+ Google reviews</li>
+                    <li>✓ 1.0+ ROAS on ads</li>
+                </ul>
+            </div>
+            <div class="milestone-card">
+                <h4>Month 6</h4>
+                <ul>
+                    <li>✓ 150+ leads generated</li>
+                    <li>✓ 40+ jobs completed</li>
+                    <li>✓ $100,000+ revenue</li>
+                    <li>✓ 20+ reviews (4.5+ stars)</li>
+                    <li>✓ 2.0+ ROAS on ads</li>
+                </ul>
+            </div>
+            <div class="milestone-card">
+                <h4>Month 12</h4>
+                <ul>
+                    <li>✓ 300+ leads generated</li>
+                    <li>✓ 100+ jobs completed</li>
+                    <li>✓ $240,000+ revenue</li>
+                    <li>✓ 50+ reviews (4.8+ stars)</li>
+                    <li>✓ 2nd crew hired</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="roles">
+        <p class="section-number">06 — ROLES & RESPONSIBILITIES</p>
+        <h2>You do the work. We run the machine.</h2>
+
+        <div class="roles-grid">
+            <div class="role-card">
+                <h4 class="operators">👷 Jacob & Dawson (Operators)</h4>
+                <ul>
+                    <li>Form Texas LLC</li>
+                    <li>Get general liability + workers comp</li>
+                    <li>Purchase equipment + truck</li>
+                    <li>Execute gutter installations</li>
+                    <li>Collect payments from customers</li>
+                    <li>Provide before/after photos</li>
+                    <li>Approve ad creative</li>
+                    <li>Weekly check-in calls (Month 1-3)</li>
+                </ul>
+            </div>
+            <div class="role-card">
+                <h4 class="age">🤖 AGE / Brad (Systems & Marketing)</h4>
+                <ul>
+                    <li>Build all digital assets</li>
+                    <li>Deploy and manage AI agents</li>
+                    <li>Run Meta + Google campaigns</li>
+                    <li>Optimize lead flow</li>
+                    <li>Weekly performance reports</li>
+                    <li>Handle customer inquiries via AI</li>
+                    <li>Manage reputation + reviews</li>
+                    <li>Ongoing system improvements</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="terms">
+        <p class="section-number">07 — TERMS & CONDITIONS</p>
+        <h2>Clear rules. Aligned incentives.</h2>
+
+        <div class="terms-list">
+            <div class="term-item">
+                <div class="term-check">✓</div>
+                <div>
+                    <h4>12-Month Initial Term</h4>
+                    <p>After 12 months, this becomes month-to-month with 90-day termination notice. We need time to build momentum together.</p>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-check">✓</div>
+                <div>
+                    <h4>Weekly Revenue Reporting</h4>
+                    <p>You self-report weekly via CRM. AGE audits monthly. Payment due every Friday for prior week's completed jobs.</p>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-check">✓</div>
+                <div>
+                    <h4>Performance Guarantee</h4>
+                    <p>If Month 3 revenue < $10,000: Revenue share waived until you hit $10K. If Month 6 revenue < $40,000: Either party can terminate without penalty.</p>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-check">✓</div>
+                <div>
+                    <h4>You Own the Customer</h4>
+                    <p>Customer relationships, brand, and website content belong to you. Upon termination (without sale), you can license AGE systems at fair market value or migrate to your own.</p>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-check">✓</div>
+                <div>
+                    <h4>Non-Compete</h4>
+                    <p>You agree not to launch a competing gutter business using AGE systems within 50 miles for 24 months post-termination.</p>
+                </div>
+            </div>
+
+            <div class="term-item">
+                <div class="term-check">✓</div>
+                <div>
+                    <h4>Exit Equity (5%)</h4>
+                    <p>Only triggered upon sale of the company. Only paid if the acquiring company adopts the AGE tech stack. Based on sale price, not EBITDA.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h3>Ready to build North Houston's smartest gutter company?</h3>
+            <p>$5K to launch. $2,797/mo to operate. 12% of what you earn.</p>
+            <p style="margin-bottom: 0;"><strong>Projected: $130K+ each by Year 2.</strong></p>
+            <a href="mailto:brad@agegrowth.ai?subject=North%20Houston%20Gutters%20-%20Let's%20Build" class="cta-button">Let's Talk</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>North Houston Gutters × AGE — Complete Business Launch Proposal</p>
+        <p>Prepared March 13, 2026</p>
+    </footer>
+</body>
+</html>
